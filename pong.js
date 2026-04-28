@@ -35,24 +35,45 @@ const gameStateEnum = {
     END: 3,
 };
 
+//----------------------------------------------------------------------------
+//MOTOR GRAFICO (GRAPHIC ENGINE)
+//----------------------------------------------------------------------------
+
 //Recuperamos el canvas de la página web
 const cvs = document.getElementById('pong_canvas');
 
 //obntenemos el contexto 2d del canvas
 const ctx =  cvs.getContext('2d');
 
-ctx.fillStyle = BG_COLOR;
-ctx.fillRect(0,0,600,400);
+//Layer 0: BASIC CANVAS DRAW HELPERS -----------------------------------------
 
-ctx.fillStyle = BALL_COLOR
+function drawRect(x,y,w,h,color){
 
-ctx.fillStyle = BALL_COLOR
+    ctx.fillStyle = color;
+    ctx.fillRect(x,y,w,h);
+}
 
-ctx.beginPath();
-ctx. arc(50,60,10,0,2*Math.PI);
-ctx.closePath();
-ctx.fill();
+function drawCircle(x,y,r,color){
+    ctx.fillStyle = color
 
-ctx.fillStyle = FONT_GAME_OVER_COLOR; //'BLUE'
-ctx.font = '45px impact';
-ctx.fillText('Saludos', 200,200);
+    ctx.beginPath();
+    ctx. arc(x,y,r,0,2*Math.PI);
+    ctx.closePath();
+    ctx.fill();
+}
+
+function drawText(text,x,y,color = FONT_COLOR, fontSize = FONT_SIZE, fontFamily = FONT_FAMILY){
+
+    ctx.fillStyle = color; //'BLUE'
+    ctx.font = `${fontSize} ${fontFamily}`//'45px impact';
+    ctx.fillText(text, x,y);
+}
+
+const CANVAS_WIDTH=cvs.width;
+const CANVAS_HEIGHT=cvs.height;
+
+drawRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT, BG_COLOR);
+drawCircle(70,80,10,BALL_COLOR);
+drawText('Saludos',200,200);
+
+
