@@ -1,0 +1,36 @@
+{
+  "name": "pong",
+  "version": "2.0.0",
+  "description": "Juego Pong Multijugador en Red",
+  "keywords": [
+    "sd",
+    "juego",
+    "pong",
+    "multijugador",
+    "red",
+    "online"
+  ],
+  "homepage": "https://github.com/enzorh222/pong#readme",
+  "bugs": {
+    "url": "https://github.com/enzorh222/pong/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enzorh222/pong.git"
+  },
+  "license": "ISC",
+  "author": "Enzo Adolfo Rubattino Huarzaya",
+  "type": "commonjs",
+  "main": "game-server.js",
+  "scripts": {
+    "start": "nodemon game-server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "socket.io": "^4.8.3"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
