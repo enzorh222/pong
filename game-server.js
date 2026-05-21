@@ -73,15 +73,15 @@ function initWebServer(){
 function initNetworkEngine() {
     // Definimos la interacción con el Motor de Juego (con la interfaz gáfica del juego)
 
-    io.on('coneccion', (socket) => {
-        console.log(`Nuevo Jugador que quiere entrar ${sockeet.id}`);
+    io.on('connection', (socket) => {
+        console.log(`Nuevo Jugador que quiere entrar ${socket.id}`);
 
         socket.on('new player', (/* data */)=> {
             // CANVAS_WIDTH = data.width;
             // CANVAS_HEIGHT = data.height;
 
             // Calculamos el número de jugadores a partir del objeto players
-            const numberOfPlayers = queryObjects.keys(players).lenght;
+            const numberOfPlayers = Object.keys(players).length;
             //  Atendemos el evento
             onNewPlayer(socket, numberOfPlayers);
 
@@ -260,7 +260,7 @@ function update(){
         getPlayer(1).score++;
         newBall();
     }
-    else if (ballRight > CANVAS_WIDTH){ç
+    else if (ballRight > CANVAS_WIDTH){
         console.log('Tanto del jugador de la izquierda.');
         getPlayer(0).score++;
         newBall();
@@ -314,3 +314,11 @@ function init() {
 
 // Punto de entrada al código
 init();
+
+
+//hostname-i
+//^C
+//sudo ufw allow 300/tcp
+//commit "Pong Multijugador en Red"
+//Actualizar version a 3.0.0
+//git tag v3.0.0
