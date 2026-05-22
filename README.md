@@ -96,7 +96,7 @@ $ sudo fc-cache -f -v
 1. **Clonar** el repositorio:
 
 ```sh
-$ git clone https://bitbucket.org/<usuario>/pong.git
+$ git clone https://github.com/enzorh222/pong.git
 ```
 
 2. **Entrar** en la carpeta del proyecto:
@@ -189,7 +189,7 @@ Las principales herramientas y bibliotecas utilizadas en el proyecto son:
 
 ## Versionado 📌
 
-Se utiliza [SemVer](http://semver.org/) para el versionado. Las versiones disponibles se encuentran en los [tags del repositorio](https://bitbucket.org/<usuario>/pong/tags).
+Se utiliza [SemVer](http://semver.org/) para el versionado. Las versiones disponibles se encuentran en los [tags del repositorio](https://github.com/enzorh222/pong/tags).
 
 A lo largo del desarrollo se han etiquetado las siguientes versiones, correspondientes a las tres fases incrementales del proyecto:
 
